@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card-title"><h4>Registration Form</h4></div>
+
+<div class="card-body">
+<form [formGroup]="loginForm" (ngSubmit)="save()">
+
+<div class="form-group" >
+  <label>Firstname :</label>
+  <input type="text"
+   formControlName="FirstName" class="form-control">
+   <small [class.d-none]="loginForm.get('FirstName').valid ||
+   loginForm.get('FirstName').untouched" class="text-danger">FirstName is required</small>
+</div>
+<div class="form-group">
+  <label>Lastname :</label>
+  <input type="text" formControlName="LastName" class="form-control">
+  <small [class.d-none]="loginForm.get('LastName').valid ||
+  loginForm.get('LastName').untouched" class="text-danger">LastName is required</small>
+</div>
+
+<div class="form-group">
+  <label>Email :</label>
+  <input type="email" formControlName="Email" class="form-control">
+  <small [class.d-none]="loginForm.get('Email').valid ||
+  loginForm.get('Email').untouched" class="text-danger">Email is required</small>
+</div>
+<div class="form-group">
+  <label>Address :</label>
+  <textarea formControlName="Address" class="form-control"></textarea>
+  <small [class.d-none]="loginForm.get('Address').valid ||
+  loginForm.get('Address').untouched" class="text-danger">Address is required</small>
+</div>
+
+<div class="form-group">
+
+  <button type="submit" class="btn btn-success" >Submit</button>
+  <small></small>
+
+</div>
+ </form>
+</div>
+</div>
+ <div>
+
+
+ </div>
+
+

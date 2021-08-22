@@ -1,0 +1,6 @@
+<div class="form-group">
+    <label>Mobile :</label>
+    <input type="tel" formControlName="Mobile" class="form-control">
+    <small [class.d-none]="loginForm.get('Mobile').valid ||
+    loginForm.get('Mobile').untouched" class="text-danger">Mobile is required</small>
+  </div>
